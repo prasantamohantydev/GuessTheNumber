@@ -1,0 +1,121 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #ff5f6d, #ffc371, #36d1dc, #5b86e5);
+  background-size: 300% 300%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#wrapper {
+  box-sizing: border-box;
+  text-align: center;
+  width: 450px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  color: #ffeb3b;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+#guess {
+  font-size: 22px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+#guessField {
+  color: #000;
+  width: 230px;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid #ff9800;
+  margin-top: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#guessField:focus {
+  border-color: #ff3d00;
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(255,61,0,0.8);
+}
+
+#subt {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 18px;
+  border: none;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#subt:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(221,36,118,0.6);
+}
+
+button {
+  background: linear-gradient(90deg, #36d1dc, #5b86e5);
+  color: #fff;
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 20px;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(91,134,229,0.6);
+}
+
+.guesses {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.lastResult {
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* Feedback Colors */
+.low { background-color: #ff9800; color: #fff; }    /* Too Low → Orange */
+.high { background-color: #f44336; color: #fff; }   /* Too High → Red */
+.correct { background-color: #4caf50; color: #fff; }/* Correct → Green */
